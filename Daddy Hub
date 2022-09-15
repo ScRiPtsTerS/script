@@ -1,10 +1,38 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("GigaHub", "Synapse")
+print("GigaHub Loaded :)")
+print("Credits: ummidk(dripkage)#2417 <-- discord")
+print("Supported Games: BedWars, FlagWars, Rebirth Champions X, Tapping Legends X, Chinese freebie game, Tai Verdes Concert, Islands of Move, Mansion of Wonder, 24kGoldn Concert, Race Clicker, and Big PaintBall")
+--[[
+
+   _____ _             _    _       _       _                     _          _ 
+  / ____(_)           | |  | |     | |     | |                   | |        | |
+ | |  __ _  __ _  __ _| |__| |_   _| |__   | |     ___   __ _  __| | ___  __| |
+ | | |_ | |/ _` |/ _` |  __  | | | | '_ \  | |    / _ \ / _` |/ _` |/ _ \/ _` |
+ | |__| | | (_| | (_| | |  | | |_| | |_) | | |___| (_) | (_| | (_| |  __/ (_| |
+  \_____|_|\__, |\__,_|_|  |_|\__,_|_.__/  |______\___/ \__,_|\__,_|\___|\__,_|
+            __/ |                                                              
+           |___/                                                               
+
+]]
 ---------------------------------------------------------------------------------------------------------------------------------------  
-    if game.PlaceId == 3214114884 then
+ _G.gameid = 3214114884
+ _G.gameid1 = 7619937171
+ _G.gameid2 = 8967359816
+ _G.gameid3 = 5306359293
+ _G.gameid4 = 6901029464
+ _G.gameid5 = 7541759836
+ _G.gameid6 = 8540346411
+ _G.gameid7 = 9285238704
+ _G.gameid8 = 6872265039
+ _G.gameid9 = 8750997647
+ _G.gameid10 = 3527629287
+ _G.gameid11 = 1
+
+if game.PlaceId == 3214114884 then
         local FlagWars = Window:NewTab("FlagWars")
         local MainFlagWars = FlagWars:NewSection("Kill")
-        MainFlagWars:NewButton("Kill All 'equip sniper' ", "Equip the sniper", function()
+        MainFlagWars:NewButton("Kill All 'PATCHED' ", "Equip the sniper", function()
         while true do
         for i, v in pairs(game.Players:GetPlayers()) do
         if v ~= game.Players.LocalPlayer then
@@ -181,7 +209,25 @@ local Window = Library.CreateLib("GigaHub", "Synapse")
         end
     end
     end)
-    end
+
+    MainFlagWars:NewLabel("Vape V4 hitbox expand")
+    MainFlagWars:NewButton("Vape V4", "find 'hitbox' right click, change to 75", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
+end
 ---------------------------------------------------------------------------------------------------------------------------------------
 if game.PlaceId == 7619937171 then
     local Freebies5 = Window:NewTab("Tai Verdes Concert")
@@ -202,6 +248,19 @@ if game.PlaceId == 7619937171 then
         wait(0.1)
     end
     end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 if game.PlaceId == 8967359816 then
@@ -211,6 +270,19 @@ if game.PlaceId == 8967359816 then
     MainFreebies4:NewButton("Get Freebies", "gets you free items", function()
         loadstring("\102\111\114\32\105\44\118\32\105\110\32\110\101\120\116\44\32\103\97\109\101\58\71\101\116\83\101\114\118\105\99\101\40\34\87\111\114\107\115\112\97\99\101\34\41\46\87\111\114\107\115\112\97\99\101\58\71\101\116\67\104\105\108\100\114\101\110\40\41\32\100\111\10\32\32\32\32\105\102\32\118\58\70\105\110\100\70\105\114\115\116\67\104\105\108\100\40\34\67\111\108\108\101\99\116\97\98\108\101\45\77\105\99\34\41\32\116\104\101\110\10\32\32\32\32\32\32\32\32\102\105\114\101\116\111\117\99\104\105\110\116\101\114\101\115\116\40\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\67\104\97\114\97\99\116\101\114\46\72\117\109\97\110\111\105\100\82\111\111\116\80\97\114\116\44\32\118\91\34\67\111\108\108\101\99\116\97\98\108\101\45\77\105\99\34\93\44\32\48\41\10\32\32\32\32\32\32\32\32\102\105\114\101\116\111\117\99\104\105\110\116\101\114\101\115\116\40\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\67\104\97\114\97\99\116\101\114\46\72\117\109\97\110\111\105\100\82\111\111\116\80\97\114\116\44\32\118\91\34\67\111\108\108\101\99\116\97\98\108\101\45\77\105\99\34\93\44\32\49\41\10\32\32\32\32\101\110\100\10\101\110\100\10")()
     end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 if game.PlaceId == 5306359293 then
@@ -254,6 +326,19 @@ if game.PlaceId == 5306359293 then
 
         game:GetService("ReplicatedStorage").Events.RedeemCode:FireServer(unpack(args))
     end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 if game.PlaceId == 6901029464 then
@@ -291,6 +376,19 @@ if game.PlaceId == 6901029464 then
         
         game:GetService("ReplicatedStorage").Events.RedeemCode:FireServer(unpack(args))
     end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 if game.PlaceId == 7541759836 then
@@ -300,6 +398,19 @@ if game.PlaceId == 7541759836 then
     MainFreebies:NewButton("Get Inf Credits", "Click Star, buy items with Credits", function()
         loadstring(game:HttpGet('https://gist.githubusercontent.com/stellar-4242/acc5ba21577da9018802a5f70c2b0bab/raw/c81d0500b10c6fb9d73025d87a049b77a884b434/cgInfCreds.lua'))()
     end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 if game.PlaceId == 8540346411 then
@@ -1298,6 +1409,19 @@ if game.PlaceId == 8540346411 then
             _G.ToxicCSAB = false;
         end
     end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 if game.PlaceId == 8750997647 then
@@ -2144,4 +2268,233 @@ if game.PlaceId == 8750997647 then
             _G.AutoRubies = false;
         end
     end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("type /console")
 end
+---------------------------------------------------------------------------------------------------------------------------------------
+    if game.PlaceId == 6872265039 then
+        local BedWars = Window:NewTab("BedWars")
+        local MainBedWars = BedWars:NewSection("Bedwars Scripts")
+        MainBedWars:NewButton("Vape V4", "loads Vape V4 Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    end)
+
+    MainBedWars:NewButton("Sape", "loads Sape Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/Initiate.lua"))()
+    end)
+
+    MainBedWars:NewButton("Rektsky", "loads Rektsky Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/8pmX8/rektsky4roblox/main/mainscript.lua"))()
+    end)
+
+    MainBedWars:NewButton("Future", "loads Future Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
+    end)
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+    MainSupportedGames:NewLabel("BedWars")
+    MainSupportedGames:NewLabel("FlagWars")
+    MainSupportedGames:NewLabel("Rebirth Champions X")
+    MainSupportedGames:NewLabel("Chinese freebie game")
+    MainSupportedGames:NewLabel("Tapping Legends X")
+    MainSupportedGames:NewLabel("Tai Verdes Concert")
+    MainSupportedGames:NewLabel("Islands of Move")
+    MainSupportedGames:NewLabel("Mansion of Wonder")
+    MainSupportedGames:NewLabel("24kGoldn Concert")
+    MainSupportedGames:NewLabel("Race Clicker")
+    MainSupportedGames:NewLabel("Big Paintball")
+    MainSupportedGames:NewLabel("type /console")
+end
+---------------------------------------------------------------------------------------------------------------------------------------
+    if game.PlaceId == 9285238704 then
+        local RaceClicker = Window:NewTab("Race Clicker")
+        local MainRaceClick = RaceClicker:NewSection("Games")
+        MainRaceClick:NewToggle("AutoFarm", "auto farms for you", function(state)
+            if state then
+                _G.RaceFarm = true;
+
+                while _G.RaceFarm == true do
+                                        --settings (make first two values values bigger if script often bugs for you)
+                    local delay1 = _G.Delay2
+                    local delay2 = _G.Delay
+                    local onlywhileround = true
+                    --main
+                    local plr = game:service'Players'.LocalPlayer
+                    while task.wait() do
+                        pcall(function()
+                            if plr.PlayerGui.UI_Main.UI.TopMenu.RaceTimer.TextLabel.Text == '' and onlywhileround then
+                                repeat task.wait() until plr.PlayerGui.UI_Main.UI.TopMenu.RaceTimer.TextLabel.Text ~= ''
+                                task.wait(1)
+                            end
+                            for i,v in pairs(workspace.Environment:GetDescendants()) do
+                                if v:FindFirstChildWhichIsA'TouchTransmitter' then
+                                    firetouchinterest(v, plr.Character.HumanoidRootPart, 0)
+                                    task.wait((v.Parent.Name == 'Stage1K' and delay1) or delay2)
+                                end
+                            end
+                        end)
+                    end
+                end
+            else
+                _G.RaceFarm = false;
+            end
+        end)
+
+        MainRaceClick:NewLabel("Change the delays, recommend 2 then 0.3")
+
+        MainRaceClick:NewTextBox("Delay 'recommend 2'", "put delay", function(txt)
+            _G.Delay = txt
+        end)
+
+        MainRaceClick:NewTextBox("Delay2 'recommend 0.3'", "put delay", function(txt)
+            _G.Delay2 = txt
+        end)
+
+        local SupportedGames = Window:NewTab("Supported Games!!!")
+        local MainSupportedGames = SupportedGames:NewSection("Games")
+        MainSupportedGames:NewLabel("BedWars")
+        MainSupportedGames:NewLabel("FlagWars")
+        MainSupportedGames:NewLabel("Rebirth Champions X")
+        MainSupportedGames:NewLabel("Chinese freebie game")
+        MainSupportedGames:NewLabel("Tapping Legends X")
+        MainSupportedGames:NewLabel("Tai Verdes Concert")
+        MainSupportedGames:NewLabel("Islands of Move")
+        MainSupportedGames:NewLabel("Mansion of Wonder")
+        MainSupportedGames:NewLabel("24kGoldn Concert")
+        MainSupportedGames:NewLabel("Race Clicker")
+        MainSupportedGames:NewLabel("Big Paintball")
+        MainSupportedGames:NewLabel("type /console")
+    end
+---------------------------------------------------------------------------------------------------------------------------------------
+    if game.PlaceId == 3527629287 then
+        local PaintBall = Window:NewTab("Big Paint Ball")
+        local MainPaint = PaintBall:NewSection("Main")
+
+        MainPaint:NewButton("Unlock Guns", "get all the Games", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/yPa19SEB', true))()
+        end)   
+
+        MainPaint:NewButton("CERBERUS", "loads a different PaintBall script", function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/0xd5f/CERBERUS/main/CERBERUS.lua", true))()
+        end) 
+
+        MainPaint:NewButton("Ski Hub V2", "loads a different PaintBall script", function ()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Yousuck780/BP/main/Big%20paintball", true))()
+        end)
+
+        local SupportedGames = Window:NewTab("Supported Games!!!")
+        local MainSupportedGames = SupportedGames:NewSection("Games")
+        MainSupportedGames:NewLabel("BedWars")
+        MainSupportedGames:NewLabel("FlagWars")
+        MainSupportedGames:NewLabel("Rebirth Champions X")
+        MainSupportedGames:NewLabel("Chinese freebie game")
+        MainSupportedGames:NewLabel("Tapping Legends X")
+        MainSupportedGames:NewLabel("Tai Verdes Concert")
+        MainSupportedGames:NewLabel("Islands of Move")
+        MainSupportedGames:NewLabel("Mansion of Wonder")
+        MainSupportedGames:NewLabel("24kGoldn Concert")
+        MainSupportedGames:NewLabel("Race Clicker")
+        MainSupportedGames:NewLabel("Big Paintball")
+        MainSupportedGames:NewLabel("type /console")
+    end
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+if game.PlaceId ~= 123 then
+    a = false;
+end
+
+if a == false then
+    local BedwarsManual = Window:NewTab("Bedwars loader?")
+    local MainBedWarsManual = BedwarsManual:NewSection("Are you you in a Bedwars match")
+    MainBedWarsManual:NewButton("Yes", "loads the bedwars script", function()
+    wait(cooldown)
+    cooldown = 0.5
+    local Bedwars = Window:NewTab("Bedwars")
+    local MainBedWars = Bedwars:NewSection("Gay")
+                MainBedWars:NewButton("Vape Private", "loads Sape Script", function()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/Initiate.lua"))()
+                end)
+        
+                MainBedWars:NewButton("Rektsky", "loads Rektsky Script", function()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/8pmX8/rektsky4roblox/main/mainscript.lua"))()
+                end)
+        
+                MainBedWars:NewButton("Future", "loads Future Script", function()
+                    loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
+                end)
+
+                
+                cooldown = 999999
+                cooldown2 = 999999
+            end)
+
+    MainBedWarsManual:NewButton("No", "game is not Supported", function()
+        wait(cooldown2)
+        cooldown2 = 0.5
+            --Main
+local Main = Window:NewTab("Player")
+local MainSection = Main:NewSection("Main")
+
+--Speed Button
+MainSection:NewButton("WalkSpeed 150", "Makes you go 150 times faster", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/7wZq13g0'))()
+end)
+
+--Jump Button
+MainSection:NewButton("JumpPower 150", "Makes you jump 150 times higher", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/1fgaFwyP'))()
+end)
+
+--Infinte Jump Button
+MainSection:NewButton("infinte Jump", "makes you jump infinite times", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/JZYc0v9r'))()
+end)
+
+--Fake Kick
+MainSection:NewButton("Fake Kick/Ban", "Makes you get Fake Kicked", function()
+    if game.PlaceId == 1 then print("Hacks dm me for script discord: ummidk(dripkage) #2417")
+    else
+    game.Players.LocalPlayer:Kick(_G.KickMessage)
+    end
+end)
+MainSection:NewTextBox("Edit KickMessage", "Don't put too many words", function(txt)
+	_G.KickMessage = txt
+end)
+
+
+    local SupportedGames = Window:NewTab("Supported Games!!!")
+    local MainSupportedGames = SupportedGames:NewSection("Games")
+        MainSupportedGames:NewLabel("BedWars")
+        MainSupportedGames:NewLabel("FlagWars")
+        MainSupportedGames:NewLabel("Rebirth Champions X")
+        MainSupportedGames:NewLabel("Chinese freebie game")
+        MainSupportedGames:NewLabel("Tapping Legends X")
+        MainSupportedGames:NewLabel("Tai Verdes Concert")
+        MainSupportedGames:NewLabel("Islands of Move")
+        MainSupportedGames:NewLabel("Mansion of Wonder")
+        MainSupportedGames:NewLabel("24kGoldn Concert")
+        MainSupportedGames:NewLabel("Race Clicker")
+        MainSupportedGames:NewLabel("Big Paintball")
+        MainSupportedGames:NewLabel("type /console")
+
+        cooldown2 = 999999
+        cooldown = 999999
+    end)
+end
+
+    --[[detect PlaceId
+local gameid = game.PlaceId
+print(gameid)
+]]
