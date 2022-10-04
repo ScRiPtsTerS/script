@@ -1,0 +1,60 @@
+-- Settings and Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/KavoTest/main/kavotest8"))()
+local Window = Library.CreateLib("PremiumHub KeySystem", "Premhub")
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
+local Players = game.Players.LocalPlayer.Name
+
+-- Key
+_G.Key = "talentispro"
+_G.KeyInput = "string"
+
+-- welcome notif
+if Players == "streety_altYt" then
+    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
+elseif Players == "Streety_altYt" then
+    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
+elseif Players == "Kirito_darkrepulsers" then
+    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
+elseif Players == "kirito_darkrepulsers" then
+    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
+else
+    Notification.new("info", Players, "welcome to the Premium Key System")
+end
+
+-- Destroy after right key
+function Destroy()
+    game:GetService("CoreGui").infinfinf:Destroy() -- infinfinf = name of gui
+end
+-- Key System
+local Key = Window:NewTab("Key System")
+local MainKey = Key:NewSection("Enter Key")
+-- Enter/Type/Check key
+MainKey:NewTextBox("Enter Key", "enter the correct key", function(txt)
+	_G.KeyInput = txt
+
+    if _G.KeyInput == _G.Key then
+        Notification.new("success", "Correct Key :)", "correct key loading Premium Hub!")
+        wait(2)
+        Destroy()
+        _G.THEMES = "Premhub"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing4"))()
+    elseif _G.KeyInput == "L" then
+        game.Players.LocalPlayer:Kick("Well your adopted")
+    elseif _G.KeyInput == "l" then
+        game.Players.LocalPlayer:Kick("Well your adopted")
+    else
+        Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub!")
+    end
+end)
+
+MainKey:NewButton("Join The Discord", "copys discord link", function()
+    Notification.new("info", "Discord", "Dicord server is copied to clipboard!")
+    setclipboard("https://discord.gg/vNwA3gZP3T")
+end)
+
+-- Feature Not ready yet/I have to make a key link for it
+    --[[MainKey:NewButton("Get Key", "copys key link", function()
+        setclipboard("https://raw.githubusercontent.com/ScRiPtsTerS/GigaChadKe/main/key")
+        Notification.new("info", "Key", "key link is copied to clipboard!")
+    end)]]
+        
