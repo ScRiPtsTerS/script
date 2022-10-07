@@ -8,16 +8,17 @@ local Players = game.Players.LocalPlayer.Name
 _G.Key = "talentispro"
 _G.KeyInput = "string"
 
--- welcome notif
-if Players == "streety_altYt" then
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+-- Functions
+
+--Welcome Owner
+function WelcomeOwners()
     Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
-elseif Players == "Streety_altYt" then
-    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
-elseif Players == "Kirito_darkrepulsers" then
-    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
-elseif Players == "kirito_darkrepulsers" then
-    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
-else
+end
+
+--Welcome Player/not Owner
+function WelcomePlayer()
     Notification.new("info", Players, "welcome to the Premium Key System")
 end
 
@@ -25,6 +26,34 @@ end
 function Destroy()
     game:GetService("CoreGui").infinfinf:Destroy() -- infinfinf = name of gui
 end
+
+-- Kick Local Player
+function KickPlayer()
+    game.Players.LocalPlayer:Kick("Well your adopted")
+end
+
+function WrongKey()
+    Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub!")
+end
+
+function RightKey()
+    Notification.new("success", "Correct Key :)", "correct key loading Premium Hub!")
+end
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- welcome notif
+if Players == "streety_altYt" then
+    WelcomeOwners()
+elseif Players == "Streety_altYt" then
+    WelcomeOwners()
+elseif Players == "Kirito_darkrepulsers" then
+    WelcomeOwners()
+elseif Players == "kirito_darkrepulsers" then
+    WelcomeOwners()
+else
+    WelcomePlayer()
+end
+
 -- Key System
 local Key = Window:NewTab("Key System")
 local MainKey = Key:NewSection("Enter Key")
@@ -33,17 +62,17 @@ MainKey:NewTextBox("Enter Key", "enter the correct key", function(txt)
 	_G.KeyInput = txt
 
     if _G.KeyInput == _G.Key then
-        Notification.new("success", "Correct Key :)", "correct key loading Premium Hub!")
+        RightKey()
         wait(2)
         Destroy()
         _G.THEMES = "Premhub"
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing4"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing5"))()
     elseif _G.KeyInput == "L" then
-        game.Players.LocalPlayer:Kick("Well your adopted")
+        KickPlayer()
     elseif _G.KeyInput == "l" then
-        game.Players.LocalPlayer:Kick("Well your adopted")
+        KickPlayer()
     else
-        Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub!")
+        WrongKey()
     end
 end)
 
@@ -57,4 +86,3 @@ end)
         setclipboard("https://raw.githubusercontent.com/ScRiPtsTerS/GigaChadKe/main/key")
         Notification.new("info", "Key", "key link is copied to clipboard!")
     end)]]
-        
