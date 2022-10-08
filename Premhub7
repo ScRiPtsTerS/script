@@ -5,8 +5,8 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 local Players = game.Players.LocalPlayer.Name
 
 -- Key
-_G.Key = "talentispro"
-_G.KeyInput = "string"
+getgenv().Key = "talentispro"
+getgenv().KeyInput = "string"
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -14,7 +14,7 @@ _G.KeyInput = "string"
 
 --Welcome Owner
 function WelcomeOwners()
-    Notification.new("info", Players.."/Owner", "The key is ".._G.Key, true, 3)
+    Notification.new("info", Players.."/Owner", "The key is "..getgenv().Key, true, 3)
 end
 
 --Welcome Player/not Owner
@@ -59,25 +59,31 @@ local Key = Window:NewTab("Key System")
 local MainKey = Key:NewSection("Enter Key")
 -- Enter/Type/Check key
 MainKey:NewTextBox("Enter Key", "enter the correct key", function(txt)
-	_G.KeyInput = txt
+	getgenv().KeyInput = txt
 
-    if _G.KeyInput == _G.Key then
+    if getgenv().KeyInput == getgenv().Key then
         RightKey()
         Destroy()
         wait(2)
-        _G.THEMES = "Premhub"
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing6"))()
-    elseif _G.KeyInput == "L" then
+        getgenv().THEMES = "Premhub"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
+    elseif getgenv().KeyInput == "L" then
         KickPlayer()
-    elseif _G.KeyInput == "l" then
+    elseif getgenv().KeyInput == "l" then
         KickPlayer()
     else
         if Players == "streety_altYt" then
             RightKey()
             Destroy()
             wait(2)
-            _G.THEMES = "Premhub"
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing6"))()
+            getgenv().THEMES = "Premhub"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
+        elseif Players == "kirito_darkrepulsers" then
+            RightKey()
+            Destroy()
+            wait(2)
+            getgenv().THEMES = "Premhub"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
         else
             WrongKey()
         end
