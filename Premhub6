@@ -14,12 +14,12 @@ _G.KeyInput = "string"
 
 --Welcome Owner
 function WelcomeOwners()
-    Notification.new("info", Players.."/Owner", "The key is ".._G.Key)
+    Notification.new("info", Players.."/Owner", "The key is ".._G.Key, true, 3)
 end
 
 --Welcome Player/not Owner
 function WelcomePlayer()
-    Notification.new("info", Players, "welcome to the Premium Key System")
+    Notification.new("info", Players, "welcome to the Premium Key System", true, 3)
 end
 
 -- Destroy after right key
@@ -33,11 +33,11 @@ function KickPlayer()
 end
 
 function WrongKey()
-    Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub!")
+    Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub!", true, 3)
 end
 
 function RightKey()
-    Notification.new("success", "Correct Key :)", "correct key loading Premium Hub!")
+    Notification.new("success", "Correct Key :)", "correct key loading Premium Hub!", true, 3)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -63,21 +63,29 @@ MainKey:NewTextBox("Enter Key", "enter the correct key", function(txt)
 
     if _G.KeyInput == _G.Key then
         RightKey()
-        wait(2)
         Destroy()
+        wait(2)
         _G.THEMES = "Premhub"
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing5"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing6"))()
     elseif _G.KeyInput == "L" then
         KickPlayer()
     elseif _G.KeyInput == "l" then
         KickPlayer()
     else
-        WrongKey()
+        if Players == "streety_altYt" then
+            RightKey()
+            Destroy()
+            wait(2)
+            _G.THEMES = "Premhub"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing6"))()
+        else
+            WrongKey()
+        end
     end
 end)
 
 MainKey:NewButton("Join The Discord", "copys discord link", function()
-    Notification.new("info", "Discord", "Dicord server is copied to clipboard!")
+    Notification.new("info", "Discord", "Dicord server is copied to clipboard!", true, 3)
     setclipboard("https://discord.gg/vNwA3gZP3T")
 end)
 
