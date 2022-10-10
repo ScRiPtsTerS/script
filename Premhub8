@@ -32,13 +32,27 @@ function KickPlayer()
     game.Players.LocalPlayer:Kick("Well your adopted")
 end
 
+--Incorrect Key
 function WrongKey()
     Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub!", true, 3)
 end
 
+-- Correct Key
 function RightKey()
     Notification.new("success", "Correct Key :)", "correct key loading Premium Hub!", true, 3)
 end
+
+-- Hub Load
+function HubLoad()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing8"))()
+end
+
+-- Discord
+function Discord()
+    Notification.new("info", "Discord", "Dicord server is copied to clipboard!", true, 3)
+    setclipboard("https://discord.gg/vNwA3gZP3T")
+end
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- welcome notif
@@ -66,7 +80,13 @@ MainKey:NewTextBox("Enter Key", "enter the correct key", function(txt)
         Destroy()
         wait(2)
         getgenv().THEMES = "Premhub"
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
+        HubLoad()
+    elseif getgenv().KEY == getgenv().Key then
+        RightKey()
+        Destroy()
+        wait(2)
+        getgenv().THEMES = "Premhub"
+        HubLoad()
     elseif getgenv().KeyInput == "L" then
         KickPlayer()
     elseif getgenv().KeyInput == "l" then
@@ -77,13 +97,13 @@ MainKey:NewTextBox("Enter Key", "enter the correct key", function(txt)
             Destroy()
             wait(2)
             getgenv().THEMES = "Premhub"
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
+            HubLoad()
         elseif Players == "kirito_darkrepulsers" then
             RightKey()
             Destroy()
             wait(2)
             getgenv().THEMES = "Premhub"
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
+            HubLoad()
         else
             WrongKey()
         end
@@ -91,8 +111,7 @@ MainKey:NewTextBox("Enter Key", "enter the correct key", function(txt)
 end)
 
 MainKey:NewButton("Join The Discord", "copys discord link", function()
-    Notification.new("info", "Discord", "Dicord server is copied to clipboard!", true, 3)
-    setclipboard("https://discord.gg/vNwA3gZP3T")
+    Discord()
 end)
 
 -- Feature Not ready yet/I have to make a key link for it
