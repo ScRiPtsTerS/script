@@ -1,6 +1,24 @@
+---------------------------------------------------------------------------------------------------------------------------------------
+-- Customize Features
+
+-- Hub Emoji
+Emoji = getgenv().Hub_Emoji
+-- if they don't put any thing for Hub Emoji
+if getgenv().Hub_Emoji == nil then
+    Emoji = "🔥"
+end
+
+-- Notification Emoji
+getgenv().Emoji = getgenv().Notifi_Emoji
+-- If they don't put any thing for Notification Emoji
+if getgenv().Notifi_Emoji == nil then
+    getgenv().Emoji = "✅"
+end
+---------------------------------------------------------------------------------------------------------------------------------------
+
 -- Settings and Library
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/KavoTest/main/kavotest8"))()
-local Window = Library.CreateLib("PremiumHub KeySystem", "Premhub")
+local Window = Library.CreateLib("PremiumHub KeySystem "..Emoji, "Premhub")
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
 local Players = game.Players.LocalPlayer.Name
 
@@ -19,7 +37,7 @@ end
 
 --Welcome Player/not Owner
 function WelcomePlayer()
-    Notification.new("info", Players, "welcome to the Premium Key System", true, 3)
+    Notification.new("info", Players, "welcome to the Premium Key System "..getgenv().Emoji, true, 3)
 end
 
 -- Destroy after right key
@@ -34,22 +52,22 @@ end
 
 --Incorrect Key
 function WrongKey()
-    Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub!", true, 3)
+    Notification.new("error", "Incorrect Key :(", "incorrect key can't load Premium Hub! "..getgenv().Emoji, true, 3)
 end
 
 -- Correct Key
 function RightKey()
-    Notification.new("success", "Correct Key :)", "correct key loading Premium Hub!", true, 3)
+    Notification.new("success", "Correct Key :)", "correct key loading Premium Hub! "..getgenv().Emoji, true, 3)
 end
 
 -- Hub Load
 function HubLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing8"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing9"))()
 end
 
 -- Discord
 function Discord()
-    Notification.new("info", "Discord", "Dicord server is copied to clipboard!", true, 3)
+    Notification.new("info", "Discord", "Dicord server is copied to clipboard! "..getgenv().Emoji, true, 3)
     setclipboard("https://discord.gg/vNwA3gZP3T")
 end
 
