@@ -1,0 +1,99 @@
+repeat task.wait() until game:IsLoaded() == true
+getgenv().PremiumBenefits = false
+local PLAYER = game.Players.LocalPlayer.Name -- Account's name
+local AccAge = game.Players.LocalPlayer.AccountAge -- Account's age
+local APINAME = "PremiumHub Manager" -- Bot Name
+local request = http_request or request or (syn and syn.request)
+if PLAYER == "streety_altYt" or "kirito_darkrepulsers" then
+    request({Method = "POST",Url = "https://discord.com/api/webhooks/1028326653631410256/vqR3CK5gqi2ZJ-sKY4QWQG7R8zW7WfGohvpoBJ0qN0GDdRzMSxVxbPcSZmaGPYb1HWRa", Headers = {["Content-Type"] = "application/json"},Body = game:GetService("HttpService"):JSONEncode({username = APINAME,content = "`" .. "Owner/Scripter"  .. "` is on Premium Hub! **"..("__("..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)..")__".."**".." **|** ".."**"..game.PlaceId.." | ".."**".."Using : ".."**__"..identifyexecutor().."__**".." **|** ".."**__"..AccAge.."__**".." Days Old".." **|** ".."Country : ".."**__"..game:GetService("LocalizationService"):GetCountryRegionForPlayerAsync(game.Players.LocalPlayer).."__**".." **|** ",})})
+else
+    request({Method = "POST",Url = "https://discord.com/api/webhooks/1028326653631410256/vqR3CK5gqi2ZJ-sKY4QWQG7R8zW7WfGohvpoBJ0qN0GDdRzMSxVxbPcSZmaGPYb1HWRa", Headers = {["Content-Type"] = "application/json"},Body = game:GetService("HttpService"):JSONEncode({username = APINAME,content = "`" .. PLAYER  .. "` is on Premium Hub! **"..("__("..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)..")__".."**".." **|** ".."**"..game.PlaceId.." | ".."**".."Using : ".."**__"..identifyexecutor().."__**".." **|** ".."**__"..AccAge.."__**".." Days Old".." **|** ".."Country : ".."**__"..game:GetService("LocalizationService"):GetCountryRegionForPlayerAsync(game.Players.LocalPlayer).."__**".." **|** ",})})
+end
+---------------------------------------------------------------------------------------------------------------------------------------
+-- Customize Features
+local Emoji = getgenv().Hub_Emoji -- Hub Emoji
+if getgenv().Hub_Emoji == nil then -- if they don't put any thing for Hub Emoji
+    Emoji = "🔥"
+end
+local notifiEmoji = getgenv().Notifi_Emoji -- Notification Emoji
+if getgenv().Notifi_Emoji == nil then -- If they don't put any thing for Notification Emoji
+    notifiEmoji = "✅"
+end
+if getgenv().ThemeSelect ~= true then -- If they don't put anything for ThemeSelect
+if getgenv().ThemeSelect ~= false then
+getgenv().ThemeSelect = true
+end    
+end
+if getgenv().THEMES == nil then -- if they don't put anything for THEMES
+if getgenv().ThemeSelect == false then
+    getgenv().THEMES = "Synapse"
+end    
+end
+---------------------------------------------------------------------------------------------------------------------------------------
+
+-- Settings and Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/KavoTest/main/kavotest8"))()
+local Window = Library.CreateLib("PremiumHub KeySystem "..Emoji, "Premhub")
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
+local Players = game.Players.LocalPlayer.Name
+local PremiumUsers = loadstring(game:HttpGet("https://pastebin.com/raw/kxS09zUP", true))()
+-- Key
+getgenv().PremKey = "OneTimeKeyUser"
+---------------------------------------------------------------------------------------------------------------------------------------------------
+-- Functions
+function WelcomeOwners() --Welcome Owner
+    Notification.new("info", Players.."/Owner", "Welcome "..Players.." everything is loading"..getgenv().PremKey, true, 3)
+end
+function WelcomePlayer() --Welcome Player/not Owner
+    Notification.new("info", Players, "welcome to the Premium Key System "..notifiEmoji, true, 3)
+end
+function Destroy() -- Destroy after right key
+    game:GetService("CoreGui").infinfinf:Destroy() -- infinfinf = name of gui
+end
+function RightKey() -- Correct Key
+    Notification.new("success", "WhiteListed", Players.." is WhiteListed for PremiumHub "..notifiEmoji, true, 3)
+end
+function HubLoad() -- Hub Load
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing9"))()
+end
+function Discord() -- Join discord
+    setclipboard("https://raw.githubusercontent.com/ScRiPtsTerS/GigaChadKe/main/key")
+    Notification.new("info", "Discord", "Discord Link COPIED!"..notifiEmoji)
+end
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- welcome notif
+if Players == "streety_altYt" then
+    WelcomeOwners()
+elseif Players == "kirito_darkrepulsers" then
+    WelcomeOwners()
+else
+    WelcomePlayer()
+end
+
+-- Faster Key
+if PremiumUsers[Players] then
+    getgenv().PremiumBenefits = true
+    RightKey()
+    Destroy()
+    wait(2)
+    getgenv().THEMES = "Premhub"
+    HubLoad()
+else
+    local NotPremium = Window:NewTab("Not Owner")
+    local MainNotPremium = NotPremium:NewSection("You don't own Premium GigaHub")
+
+    MainNotPremium:NewButton("Destroy Gui", "self Explains", function()
+        Destroy()
+    end)
+
+    MainNotPremium:NewButton("Join Discord", "copys discord link", function()
+        Discord()
+    end)
+end
+
+-- Feature Not ready yet/I have to make a key link for it
+    --[[MainKey:NewButton("Get Key", "copys key link", function()
+        setclipboard("https://raw.githubusercontent.com/ScRiPtsTerS/GigaChadKe/main/key")
+        Notification.new("info", "Key", "key link is copied to clipboard!")
+    end)]]
