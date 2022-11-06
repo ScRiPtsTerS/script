@@ -54,7 +54,7 @@ function RightKey() -- Correct Key
     Notification.new("success", "WhiteListed", Players.." is WhiteListed for PremiumHub "..notifiEmoji, true, 3)
 end
 function HubLoad() -- Hub Load
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing9"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing11"))()
 end
 function Discord() -- Join discord
     setclipboard("https://raw.githubusercontent.com/ScRiPtsTerS/GigaChadKe/main/key")
